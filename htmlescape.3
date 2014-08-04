@@ -26,7 +26,6 @@
 .Pp
 .Ft int
 .Fn htmlescape "const char *src" "char **dst"
-
 .Sh DESCRIPTION
 The
 .Nm htmlescape
@@ -35,13 +34,11 @@ converts the characters listed above to their corresponding HTML entities.
 .Pp
 The calling program is responsible for freeing the memory allocated to
 .Fa *dst.
-
 .Sh RETURN VALUE
 .Nm htmlescape
 returns 0 on success.
 If memory could not be allocated for the destination string, 
 then ENOMEM is returned.
-
 .Sh EXAMPLE
 The following code fragment illustrates a simple usage:
 .Bd -literal -offset indent
@@ -52,9 +49,7 @@ printf("dst = '%s'\n", dst);
 free(dst);
 
 .Ed
-
 produces this output:
-
 .Bd -literal -offset indent
 dst = 'forbidden: &lt; &gt; &amp; &quote;'
 .Ed

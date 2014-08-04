@@ -5,7 +5,7 @@
 
 // Return the number of times the string needle appears in the string s.
 size_t
-count(const char *s, const char *needle)
+htmlescape_count(const char *s, const char *needle)
 {
 	size_t	n = 0;
 	size_t	needlesz = 0;
@@ -58,7 +58,7 @@ htmlescape(const char *src, char **dst)
 	for (i = 0; i < fromtosz; i += 2) {
 		size_t sz0 = strlen(fromto[i]);
 		size_t sz1 = strlen(fromto[i + 1]);
-		dstsz += count(src, fromto[i]) * (sz1 - sz0);
+		dstsz += htmlescape_count(src, fromto[i]) * (sz1 - sz0);
 	}
 
 	if ( (*dst = calloc(dstsz + 1, 1)) == NULL)

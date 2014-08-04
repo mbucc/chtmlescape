@@ -43,7 +43,7 @@ quote()
 	char		*result = 0;
 		
 	htmlescape("\\\"", &result);
-	is(result, "&quote;");
+	is(result, "&quot;");
 	free(result);
 }
 
@@ -53,7 +53,7 @@ amp_lt_gt_quote()
 	char		*result = 0;
 		
 	htmlescape("& < > \\\"", &result);
-	is(result, "&amp; &lt; &gt; &quote;");
+	is(result, "&amp; &lt; &gt; &quot;");
 	free(result);
 }
 
@@ -63,7 +63,7 @@ gt_quote_amp_lt_nospace()
 	char		*result = 0;
 		
 	htmlescape(">\\\"&<", &result);
-	is(result, "&gt;&quote;&amp;&lt;");
+	is(result, "&gt;&quot;&amp;&lt;");
 	free(result);
 }
 

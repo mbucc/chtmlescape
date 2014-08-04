@@ -45,7 +45,7 @@ htmlescape(const char *src, char **dst)
 					"&",	"&amp;",
 					"<",	"&lt;",
 					">",	"&gt;",
-					"\\\"",	"&quote;" };
+					"\\\"",	"&quot;" };
 	size_t		dstsz = 0;
 	size_t		fromtosz = 0;
 	size_t		i = 0;

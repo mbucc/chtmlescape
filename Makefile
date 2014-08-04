@@ -5,7 +5,7 @@ test:
 
 
 README: htmlescape.3
-	groff -Tascii -man $? > t
+	groff -Tascii -man $? | sed -e 's/.//g' > t
 	mv t README
 
 

@@ -1,27 +1,27 @@
 
 HTMLESCAPE(3)            BSD Library Functions Manual            HTMLESCAPE(3)
 
-NNAAMMEE
-     hhttmmlleessccaappee -- HTML escape the characters '<', '>', '&' and '"'
+NAME
+     htmlescape -- HTML escape the characters '<', '>', '&' and '"'
 
-SSYYNNOOPPSSIISS
-     ##iinncclluuddee <<hhttmmlleessccaappee..hh>>
+SYNOPSIS
+     #include <htmlescape.h>
 
-     _i_n_t
-     hhttmmlleessccaappee(_c_o_n_s_t _c_h_a_r _*_s_r_c, _c_h_a_r _*_*_d_s_t);
+     int
+     htmlescape(const char *src, char **dst);
 
-DDEESSCCRRIIPPTTIIOONN
-     The hhttmmlleessccaappee function parses a  string and converts the characters
+DESCRIPTION
+     The htmlescape function parses a  string and converts the characters
      listed above to their corresponding HTML entities.
 
      The calling program is responsible for freeing the memory allocated to
-     _*_d_s_t_.
+     *dst.
 
-RREETTUURRNN VVAALLUUEE
-     hhttmmlleessccaappee returns 0 on success.  If memory could not be allocated for
+RETURN VALUE
+     htmlescape returns 0 on success.  If memory could not be allocated for
      the destination string, then ENOMEM is returned.
 
-EEXXAAMMPPLLEE
+EXAMPLE
      The following code fragment illustrates a simple usage:
 
            char *dst = 0;

@@ -1,0 +1,8 @@
+{
+  "name": "chtmlescape",
+  "version": "1.0.0",
+  "repo": "mbucc/chtmlescape",
+  "description": "Escape the characters '<','>','&' and '\"'",
+  "license": "ISC",
+  "src": ["htmlescape.c", "htmlescape.h" ]
+}

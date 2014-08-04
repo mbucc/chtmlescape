@@ -44,8 +44,8 @@ The following code fragment illustrates a simple usage:
 .Bd -literal -offset indent
 char *dst = 0;
 
-htmlescape("forbidden: < > & \\\"", dst);
-printf("dst = '%s'\n", dst);
+htmlescape("forbidden: < > & \\\\\\"", dst);
+printf("dst = '%s'\\n", dst);
 free(dst);
 
 .Ed

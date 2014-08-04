@@ -9,9 +9,8 @@ README: htmlescape.3
 	mv t README
 
 
+MANDIR=/usr/share/man/man3
 man: ${MANDIR}/htmlescape.3
 
-
-MANDIR=/usr/share/man/man3
 ${MANDIR}/%.3: %.3
 	sudo cp $? $@	

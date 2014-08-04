@@ -27,7 +27,7 @@ EXAMPLE
            char *dst = 0;
 
            htmlescape("forbidden: < > & \
-           printf("dst = '%s'0, dst);
+           printf("dst = '%s'\n", dst);
            free(dst);
 
      produces this output:

@@ -47,7 +47,25 @@ quote()
 	free(result);
 }
 
+void
+amp_lt_gt_quote()
+{
+	char		*result = 0;
+		
+	htmlescape("& < > \\\"", &result);
+	is(result, "&amp; &lt; &gt; &quote;");
+	free(result);
+}
 
+void
+gt_quote_amp_lt_nospace()
+{
+	char		*result = 0;
+		
+	htmlescape(">\\\"&<", &result);
+	is(result, "&gt;&quote;&amp;&lt;");
+	free(result);
+}
 
 
 
@@ -55,12 +73,14 @@ int
 main (int argc, char *argv[])
 {
 
-	plan(4);
+	plan(6);
 
 	amp();
 	lt();
 	gt();
 	quote();
+	amp_lt_gt_quote();
+	gt_quote_amp_lt_nospace();
 
 	done_testing();
 }

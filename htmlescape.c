@@ -1,5 +1,6 @@
 #include <errno.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 // Return the number of times the string needle appears in the string s.
@@ -50,16 +51,21 @@ htmlescape(const char *src, char **dst)
 	size_t		i = 0;
 	int		rval = 0;
 
-
 	fromtosz = sizeof(fromto) / sizeof(fromto[0]);
+
 	dstsz = strlen(src);
-	for (i = 0; i < fromtosz; i += 2)
-		dstsz += count(src, fromto[i]) * strlen(fromto[i + 1] - strlen(fromto[i]));
+
+	for (i = 0; i < fromtosz; i += 2) {
+		size_t sz0 = strlen(fromto[i]);
+		size_t sz1 = strlen(fromto[i + 1]);
+		dstsz += count(src, fromto[i]) * (sz1 - sz0);
+	}
 
 	if ( (*dst = calloc(dstsz + 1, 1)) == NULL)
 		rval = ENOMEM;
 
 	for (p = *dst; *src && !rval; src++) {
+
 	
 		for (i = 0; i < fromtosz; i += 2)
 

@@ -1,5 +1,5 @@
 test:
-	(cd regress ; make test)
+	(cd regress ; make)
 
 MANDIR=/usr/share/man/man3
 

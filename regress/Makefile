@@ -8,10 +8,10 @@ CC=gcc
 CFLAGS=-Wall -I./deps/tap.c
 
 all: test
+	./test
 
 test: dep test.c ${T}/tap.c ../htmlescape.h ../htmlescape.c
 	$(CC) $(CFLAGS) -o test test.c ${T}/tap.c ../htmlescape.c
-	./test
 
 dep: ${T}
 

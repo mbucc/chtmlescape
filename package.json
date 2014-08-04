@@ -1,6 +1,6 @@
 {
   "name": "chtmlescape",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repo": "mbucc/chtmlescape",
   "description": "Escape the characters '<','>','&' and '\"'",
   "license": "ISC",

@@ -8,26 +8,59 @@
 #include "../htmlescape.h"
 
 void
-simple()
+amp()
 {
 	char		*result = 0;
 		
 	htmlescape("&", &result);
-
 	is(result, "&amp;");
-
 	free(result);
-	
 }
+
+void
+lt()
+{
+	char		*result = 0;
+		
+	htmlescape("<", &result);
+	is(result, "&lt;");
+	free(result);
+}
+
+void
+gt()
+{
+	char		*result = 0;
+		
+	htmlescape(">", &result);
+	is(result, "&gt;");
+	free(result);
+}
+
+void
+quote()
+{
+	char		*result = 0;
+		
+	htmlescape("\\\"", &result);
+	is(result, "&quote;");
+	free(result);
+}
+
+
+
 
 
 int
 main (int argc, char *argv[])
 {
 
-	plan(1);
+	plan(4);
 
-	simple();
+	amp();
+	lt();
+	gt();
+	quote();
 
 	done_testing();
 }

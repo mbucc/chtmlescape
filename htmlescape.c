@@ -18,7 +18,7 @@ count(const char *s, const char *needle)
 	if (strlen(needle) == 1)
 
 		/*
-		 * I'm guessing this is faster.
+		 * I'm guessing this is faster than strstr below.
 		 */
 
 		for (; *s; n += ( *s == needle[0] ), s++ );
@@ -44,10 +44,10 @@ htmlescape(const char *src, char **dst)
 					"&",	"&amp;",
 					"<",	"&lt;",
 					">",	"&gt;",
-					"\\\"",	"&quote" };
+					"\\\"",	"&quote;" };
 	size_t		dstsz = 0;
 	size_t		fromtosz = 0;
-	size_t		i;
+	size_t		i = 0;
 	int		rval = 0;
 
 

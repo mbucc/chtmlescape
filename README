@@ -1,3 +1,12 @@
+--------------------------------------------------------------------
+
+The man page below defines the interface for semantic versioning.
+
+A participant in the clibs project.
+See https://github.com/clibs/clib/wiki/Packages for more info.
+
+                                        Mon Aug  4 20:55:57 EDT 2014
+--------------------------------------------------------------------
 
 HTMLESCAPE(3)            BSD Library Functions Manual            HTMLESCAPE(3)
 
@@ -21,6 +30,9 @@ RETURN VALUE
      htmlescape returns 0 on success.  If memory could not be allocated for
      the destination string, then ENOMEM is returned.
 
+     If either argument is null or the src string is empty, 0 is returned and
+     dst is unchanged.
+
 EXAMPLE
      The following code fragment illustrates a simple usage:
 
@@ -32,6 +44,6 @@ EXAMPLE
 
      produces this output:
 
-           dst = 'forbidden: &lt; &gt; &amp; &quote;'
+           dst = 'forbidden: &lt; &gt; &amp; &quot;'
 
 BSD                             August 4, 2014                             BSD

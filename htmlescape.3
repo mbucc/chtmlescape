@@ -39,6 +39,10 @@ The calling program is responsible for freeing the memory allocated to
 returns 0 on success.
 If memory could not be allocated for the destination string, 
 then ENOMEM is returned.
+.Pp
+If either argument is null or the src string is empty, 0 is returned and
+.Fa dst
+is unchanged.
 .Sh EXAMPLE
 The following code fragment illustrates a simple usage:
 .Bd -literal -offset indent

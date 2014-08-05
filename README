@@ -1,12 +1,12 @@
---------------------------------------------------------------------
-
-The man page below defines the interface for semantic versioning.
-
-A participant in the clibs project.
-See https://github.com/clibs/clib/wiki/Packages for more info.
-
-                                        Mon Aug  4 20:55:57 EDT 2014
---------------------------------------------------------------------
+     --------------------------------------------------------------------
+     
+     The man page below defines the interface for semantic versioning.
+     
+     A participant in the clibs project.
+     See https://github.com/clibs/clib/wiki/Packages for more info.
+     
+                                             Mon Aug  4 20:57:52 EDT 2014
+     --------------------------------------------------------------------
 
 HTMLESCAPE(3)            BSD Library Functions Manual            HTMLESCAPE(3)
 

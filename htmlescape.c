@@ -51,6 +51,9 @@ htmlescape(const char *src, char **dst)
 	size_t		i = 0;
 	int		rval = 0;
 
+	if (!src || !dst || !strlen(src))
+		return rval;
+
 	fromtosz = sizeof(fromto) / sizeof(fromto[0]);
 
 	dstsz = strlen(src);

@@ -5,7 +5,7 @@
      A participant in the clibs project.
      See https://github.com/clibs/clib/wiki/Packages for more info.
      
-                                             Mon Aug  4 20:57:52 EDT 2014
+                                             Sat Dec 13 10:12:49 EST 2014
      --------------------------------------------------------------------
 
 HTMLESCAPE(3)            BSD Library Functions Manual            HTMLESCAPE(3)
@@ -38,7 +38,7 @@ EXAMPLE
 
            char *dst = 0;
 
-           htmlescape("forbidden: < > & \\\"", dst);
+           htmlescape("forbidden: < > & \\\"", &dst);
            printf("dst = '%s'\n", dst);
            free(dst);
 
@@ -46,4 +46,4 @@ EXAMPLE
 
            dst = 'forbidden: &lt; &gt; &amp; &quot;'
 
-BSD                             August 4, 2014                             BSD
+BSD                            December 13, 2014                           BSD
